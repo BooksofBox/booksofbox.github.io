@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papa's Pizzeria — BooksofBox</title>
+<meta name="description" content="Play Papa's Pizzeria free in your browser. Take orders, build pizzas, keep the customers happy.">
+<meta name="theme-color" content="#120f1e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">BooksofBox</a>
+  </div>
+</header>
+
+<main class="game-page">
+  <div class="wrap">
+    <a class="back-link" href="../index.html">&larr; Back to games</a>
+    <span class="card-tag">Time management · 1 player</span>
+    <h1>Papa's Pizzeria</h1>
+    <p class="lede">Run the counter solo: take each order, build the pizza to spec, time the oven right, and slice it up before the next customer loses patience. Tips add up fast once your stations stop colliding.</p>
+
+    <div class="player-frame">
+      <iframe id="game-frame" src="https://www.miniplay.com/embed/papas-pizzeria" title="Papa's Pizzeria game" allow="fullscreen" loading="lazy"></iframe>
+    </div>
+
+    <div class="frame-actions">
+      <button type="button" id="fullscreen-btn">Play fullscreen</button>
+    </div>
+
+    <p class="note note--tight">Papa's Pizzeria has its own save slots built in — pick one the first time you play, and your progress, unlocks, and regulars will be right there next time, as long as you keep playing from this page in the same browser.</p>
+
+    <div class="details-grid">
+      <div>
+        <h2>Controls</h2>
+        <ul class="controls-list">
+          <li>Mouse — click stations, ingredients and the order ticket</li>
+        </ul>
+      </div>
+      <div>
+        <h2>How it works</h2>
+        <p style="color:var(--text-muted); font-size:0.95rem;">Grab the order, build the pizza on the topping station, bake it for the right time, then cut and box it. Regulars remember their usual order — check the customer book when it unlocks.</p>
+      </div>
+    </div>
+
+    <p class="note">Papa's Pizzeria is made by Flipline Studios. This page plays the game through Miniplay's official embeddable player — no game files are hosted on this site.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Built with plain HTML, hosted free on GitHub Pages.</span>
+    <span><a href="../index.html">Back home</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('fullscreen-btn').addEventListener('click', function () {
+    var frame = document.getElementById('game-frame');
+    if (frame.requestFullscreen) frame.requestFullscreen();
+    else if (frame.webkitRequestFullscreen) frame.webkitRequestFullscreen();
+  });
+</script>
+
+</body>
+</html>
